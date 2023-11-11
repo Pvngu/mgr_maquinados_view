@@ -1,0 +1,159 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #1f242d;
+    background-blend-mode: multiply,multiply;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 35px;
+    margin-top: 30px;
+}
+
+.container-flex{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    width: 50%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.container-box{
+    border: solid 1px black;
+    border-radius: 10px;
+    background: #262c37;
+}
+
+.iconContainer{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-4px);
+}
+
+.container div .bx {
+    font-size: 100px;
+}
+
+a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 2px;
+    font-size: 16px;
+    transition: 0.5s;
+    text-align: center;
+}
+a:hover{
+    color: rgb(255, 255, 255, 1);
+}
+a span{
+    display: block;
+    position: absolute;
+    background: #2894ff;
+}
+a span:nth-child(1){
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+a:hover span:nth-child(1){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+a span:nth-child(2){
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+a:hover span:nth-child(2){
+    transform: scaleY(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+a span:nth-child(3){
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.35s;
+}
+
+a:hover span:nth-child(3){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transition-delay: 0.35s;
+}
+
+a span:nth-child(4){
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.35s;
+}
+
+a:hover span:nth-child(4){
+    transform: scaleY(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    transition-delay: 0.35s;
+}
+
+.collaborators{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 100px;
+}
+
+.profile{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.profile h2{
+    font-size:30px;
+    color: #fff;
+    font-weight: 500;
+}
