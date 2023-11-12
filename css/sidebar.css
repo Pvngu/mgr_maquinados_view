@@ -107,3 +107,19 @@ header h1{
     text-align: center;
     padding-top: 40px;
 }
+
+.return{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.return a{
+     color: black;
+     font-size: 80px;
+}
+
+.return span {
+    transform: translateY(-30px);
+    font-size: 30px;
+}
