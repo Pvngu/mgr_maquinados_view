@@ -14,9 +14,11 @@ h1{
     text-transform: uppercase;
     font-size: 35px;
     margin-top: 30px;
+
 }
 
 .container-flex{
+    position: relative;
     display: flex;
     justify-content: center;
 }
@@ -27,6 +29,7 @@ h1{
     justify-content: center;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 40px;
+    padding-bottom: 100px;
 }
 
 .container-box{
@@ -133,6 +136,13 @@ a:hover span:nth-child(4){
     transform-origin: left;
     transition: transform 0.5s;
     transition-delay: 0.35s;
+}
+
+section{
+    position: relative;
+    background: linear-gradient(38.73deg, rgba(204, 0, 187, 0.15) 0%, rgba(201, 32, 184, 0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.15) 100%);
+    padding-top: 30px;
+    clip-path: polygon(0 6%, 23% 0, 100% 6%, 100% 100%, 0 100%);
 }
 
 .collaborators{
