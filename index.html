@@ -17,7 +17,7 @@
     <h1>Paginas de prueba para MGR</h1>
     <div class="container-flex">
         <div class="container">
-            <a href="login.html" class="container-box">
+            <a href="login.html" onmouseover="playHoverSound()" class="container-box">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -27,7 +27,7 @@
                     <i class='bx bx-log-in'></i>
                 </div>
             </a>
-            <a href="sidebar.html" class="container-box">
+            <a href="sidebar.html" onmouseover="playHoverSound()" class="container-box">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -37,7 +37,7 @@
                     <i class='bx bxs-dashboard'></i>
                 </div>
             </a>
-            <a href="#" class="container-box">
+            <a href="#" onmouseover="playHoverSound()" class="container-box">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -47,7 +47,7 @@
                     <i class='bx bx-show' ></i>
                 </div>
             </a>
-            <a href="#" class="container-box">
+            <a href="#" onmouseover="playHoverSound()" class="container-box">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -57,7 +57,7 @@
                     <i class='bx bx-user'></i>
                 </div>
             </a>
-            <a href="#" class="container-box">
+            <a href="#" onmouseover="playHoverSound()" class="container-box">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -67,7 +67,7 @@
                     <i class='bx bx-user'></i>
                 </div>
             </a>
-            <a href="#" class="container-box">
+            <a href="#" onmouseover="playHoverSound()" class="container-box">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -76,6 +76,10 @@
                 <div class="iconContainer">
                 </div>
             </a>
+            <audio id="hoverSound">
+                <source src="assets/sounds/boop 1.mp3" type="audio/mp3">
+                Your browser does not support the audio element.
+            </audio>
         </div>
     </div>
     <section>
@@ -102,5 +106,12 @@
         
     </div>
     </section>
+    <script>
+        function playHoverSound() {
+            var audio = document.getElementById("hoverSound");
+            audio.currentTime = 0;
+            audio.play();
+        }
+    </script>
 </body>
 </html>

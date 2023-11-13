@@ -93,10 +93,48 @@
         <dialog class="settingsModal modal">
             <div class="modalHeader">
                 <h1>Configuracion</h1>
+                <img class = "closeBtnModalS modalX" src="assets/images/close_button.png" alt="close button">
+            </div>
+            <div class="modalContent">
+                <div class="theme-switcher">
+                    <h2>Tema</h2>
+                    <div class="lightMode">
+                        <i class='bx bxs-sun'></i>
+                        <span>Brillo</span>
+                    </div>
+                    <div class="lightMode">
+                        <i class='bx bxs-moon'></i>
+                        <span>Dark</span>
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        <a>
+                            <i class='bx bx-cog'></i>
+                            <span>Configuracion de la cuenta</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <i class='bx bx-info-circle'></i>
+                            <span>Acerca de la pagina</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </dialog>
         <dialog class="logoutModal modal">
-            <h1>Cerrar sesion</h1>
+            <div class="modalHeader">
+                <h1>Cerrar sesion</h1>
+                <img class = "closeBtnModalL modalX" src="assets/images/close_button.png" alt="close button">
+            </div>
+            <div class="modalContentL">
+                <div class="logoutText">Esta seguro que quiere cerrar la sesion?</div>
+                <div class="logoutButtons">
+                    <button id="logoutClose" class = "closeBtnModalL">Cerrar</button>
+                    <button id="logoutOk" type="submit">Ok</button>
+                </div>
+            </div>
         </dialog>
 
     </div>
@@ -111,15 +149,23 @@
     }
 
     // popup window
+    const closeButtonS = document.querySelector(".closeBtnModalS")
     const modalS = document.querySelector(".settingsModal")
     const openButtonS = document.querySelector(".openModalS")
     openButtonS.addEventListener("click", () => {
         modalS.showModal()
     })
+    closeButtonS.addEventListener("click", () => {
+        modalS.close();
+    })
+    const closeButtonL = document.querySelector(".closeBtnModalL");
     const modalL = document.querySelector(".logoutModal")
     const openButtonL = document.querySelector(".openModalL")
     openButtonL.addEventListener("click", () => {
         modalL.showModal()
+    })
+    closeButtonL.addEventListener("click", () => {
+        modalL.close();
     })
 </script>
 </html>

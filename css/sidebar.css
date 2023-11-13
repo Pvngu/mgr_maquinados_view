@@ -116,6 +116,7 @@ i{
 
 .sidebar .nameList .bottomItems{
     padding-bottom: 20px;
+    cursor: pointer;
 }
 
 .sidebar .itemsHeader{
@@ -171,23 +172,83 @@ header .bizName{
     border: 0;
     border-radius: 10px;
     box-shadow: 0 0 1em rgb(0 0 0 / .3);
-    width: 600px;
-    height: 450px;
+    width: 500px;
     margin: auto;
-  
     & > * {
       margin: 0 0 0.5rem 0;
     }
 }
 
 .modalHeader{
+    color: #7E7F79;
+    position: relative;
     padding-block: 20px;
     border-bottom: solid 1px rgba(0, 0, 0, .1);
 }
 
 .modalHeader h1{
     font-weight: 400;
-    color: #7E7F79;
     text-align: center;
     text-transform: uppercase;
+}
+
+.modalX{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.modalContent, .modalContentL{
+    padding-inline: 40px;
+}
+
+.modalContent .theme-switcher h2{
+    font-size: 18px;
+    color: #7E7F79;
+    font-weight: 600;
+}
+
+.modalContent ul li{
+    list-style: none;
+    padding-bottom: 40px;
+}
+
+.modalContent ul li a{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.modalContent ul li a i{
+    font-size: 28px;
+    margin-right: 10px;
+    transform: translateY(1px);
+}
+
+.modalContentL .logoutText{
+    padding-block: 8px;
+}
+
+.modalContentL .logoutButtons{
+    float: right;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+.modalContentL .logoutButtons button{
+    font-family: 'Poppins';
+    font-weight: 600;
+    padding: 6px 16px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: red;
+    color: #fff;
+}
+
+.modalContentL .logoutButtons #logoutClose{
+    background: #F0F4FA;
+    color: #4f5463;
 }
