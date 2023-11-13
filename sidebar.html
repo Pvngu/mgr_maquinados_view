@@ -13,7 +13,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header></header>
     <div class="sidebar">
         <div class="logoContent">
             <div class="logo">
@@ -22,57 +21,105 @@
             </div>
         </div>
         <ul class="nameList">
-            <li>
-                <a href="#">
-                    <i class='bx bxs-dashboard'></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bxs-dashboard'></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bxs-dashboard'></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bxs-dashboard'></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class='bx bxs-dashboard'></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
+            <div class="topItems">
+                <div class="itemsHeader">Menu</div>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-dashboard'></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <span class="tooltip">Dashboard</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-dashboard'></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <span class="tooltip">Dashboard</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-dashboard'></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <span class="tooltip">Dashboard</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-dashboard'></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <span class="tooltip">Dashboard</span>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bxs-dashboard'></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <span class="tooltip">Dashboard</span>
+                </li>
+            </div>
+            <div class="bottomItems">
+                <div class="itemsHeader">preferencias</div>
+                <li>
+                    <a class="openModalS">
+                        <i class='bx bx-cog'></i>
+                        <span>Configuracion</span>
+                    </a>
+                    <span class="tooltip">Configuracion</span>
+                </li>
+                <li>
+                    <a class="openModalL">
+                        <i class='bx bx-log-out-circle'></i>
+                        <span>Cerrar sesion</span>
+                    </a>
+                    <span class="tooltip">Cerrar sesion</span>
+                </li>
+            </div>
         </ul>
     </div>
     <div class="home">
         <header>
-            <h1>MGR MAQUINADOS</h1>
+            <h1 class="bizName">MGR MAQUINADOS</h1>
         </header>
         <div class="content">
             <h1>HERE START EVERYTHING!</h1>
             <div class="return">
                 <a href="index.html"><i class='bx bx-exit'></i></a>
                 <span>EXIT HERE</span>
-              </div>
+            </div>
         </div>
+
+        <dialog class="settingsModal modal">
+            <div class="modalHeader">
+                <h1>Configuracion</h1>
+            </div>
+        </dialog>
+        <dialog class="logoutModal modal">
+            <h1>Cerrar sesion</h1>
+        </dialog>
+
     </div>
 </body>
 <script>
+    // sidebar button
     let btn = document.querySelector("#btn");
     let sidebar = document.querySelector(".sidebar");
 
     btn.onclick = function() {
         sidebar.classList.toggle("active");
     }
+
+    // popup window
+    const modalS = document.querySelector(".settingsModal")
+    const openButtonS = document.querySelector(".openModalS")
+    openButtonS.addEventListener("click", () => {
+        modalS.showModal()
+    })
+    const modalL = document.querySelector(".logoutModal")
+    const openButtonL = document.querySelector(".openModalL")
+    openButtonL.addEventListener("click", () => {
+        modalL.showModal()
+    })
 </script>
 </html>
