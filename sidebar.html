@@ -112,15 +112,22 @@
                 <img class = "closeBtnModalS modalX" src="assets/images/close_button.png" alt="close button">
             </div>
             <div class="modalContent">
-                <div class="theme-switcher">
+                <div class="switchContainer">
                     <h2>Tema</h2>
-                    <div class="lightMode">
-                        <i class='bx bxs-sun'></i>
-                        <span>Brillo</span>
-                    </div>
-                    <div class="lightMode">
-                        <i class='bx bxs-moon'></i>
-                        <span>Dark</span>
+                    <div class="theme-switcher">
+                        <input type="radio" id="light-theme" name="themes">
+                        <label for="light-theme">
+                            <span>
+                                <i class='bx bxs-sun'></i> Brillo
+                            </span> 
+                        </label>
+                        <input type="radio" id="dark-theme" name="themes" checked>
+                        <label for="dark-theme">
+                            <span>
+                                <i class='bx bxs-moon'></i> Dark
+                            </span>
+                        </label>
+                        <span class="slider"></span>
                     </div>
                 </div>
                 <ul>
@@ -183,5 +190,16 @@
     closeButtonL.addEventListener("click", () => {
         modalL.close();
     })
+
+    //Theme switcher slider
+    var html = document.getElementsByTagName('html');
+    var radios = document.getElementsByName('themes')
+
+    for (i = 0; i < radios.length; i++){
+        radios[i].addEventListener('change', function() {
+            html[0].classList.remove(html[0].classList.item(0));
+            html[0].classList.add(this.id);
+        });
+    }
 </script>
 </html>
