@@ -137,13 +137,50 @@ i{
     left: 75px;
     width: calc(100% - 75px);
 }
+
 header{
     border-bottom: solid 1px rgba(0, 0, 0, .1);
+    max-height: 66px;
+    overflow: hidden;
 }
+
 header .bizName{
     font-size: 1.4em;
     padding: 16px;
     font-weight: 400;
+}
+
+.headerContent{
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerContent .rightContent{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.headerContent .rightContent .userProfile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1em;
+    margin-left: 40px;
+}
+
+.userProfile .name{
+    font-size: 0.9em;
+    font-weight: 400;
+}
+
+.userProfile .job{
+    font-size: 0.7em;
+    text-align: right;
+}
+
+.userProfile .profilePicture{
+    font-size: 23px;
 }
 
 .content h1{
