@@ -263,14 +263,16 @@ header .bizName{
     cursor: pointer;
 }
 
-.modalContent, .modalContentL{
-    padding-inline: 40px;
+.modalContent{
+    padding: 15px 40px;
+    text-align: justify;
 }
 
-.modalContent .switchContainer h2{
+.modalContent h2{
     font-size: 18px;
     color: var(--c-text-header);
     font-weight: 500;
+    padding-block: 15px;
 }
 
 .switchContainer .theme-switcher{
@@ -313,7 +315,6 @@ header .bizName{
     bottom: 3px;
     border-radius: 10px;
     transition: .30s ease, transform 0.25s ease-out;
-    transform: translateX(0);
 }
 
 .theme-switcher input:nth-of-type(1):checked ~ .slider{
@@ -324,34 +325,39 @@ header .bizName{
     transform: translateX(100%);
 }
 
-.modalContent ul li{
+.stgModal ul li{
     list-style: none;
     padding-block: 20px;
 }
 
-.modalContent ul li a{
+.stgModal ul li a{
     display: flex;
     align-items: center;
     cursor: pointer;
+    opacity: .7;
 }
 
-.modalContent ul li a i{
+.stgModal ul li a:hover{
+    opacity: 1;
+}
+
+.stgModal ul li a i{
     font-size: 28px;
     margin-right: 10px;
     transform: translateY(1px);
 }
 
-.modalContentL .logoutText{
+.lgtModal .logoutText{
     padding-block: 8px;
 }
 
-.modalContentL .logoutButtons{
+.lgtModal .logoutButtons{
     float: right;
     padding-top: 25px;
     padding-bottom: 15px;
 }
 
-.modalContentL .logoutButtons button{
+.lgtModal .logoutButtons button{
     font-family: 'Poppins';
     font-weight: 600;
     padding: 6px 16px;
@@ -363,7 +369,15 @@ header .bizName{
     color: #fff;
 }
 
-.modalContentL .logoutButtons #logoutClose{
+.lgtModal .logoutButtons #logoutClose{
     background: #F0F4FA;
     color: #4f5463;
+}
+
+.modalContentAU{
+    padding-block: 15px;
+}
+
+.modalContentAU h2{
+    padding-block: 10px;
 }

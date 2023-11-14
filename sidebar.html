@@ -106,12 +106,13 @@
             </div>
         </div>
 
+        <!-- settigns menu -->
         <dialog class="settingsModal modal">
             <div class="modalHeader">
                 <h1>Configuracion</h1>
                 <img class = "closeBtnModalS modalX" src="assets/images/close_button.png" alt="close button">
             </div>
-            <div class="modalContent">
+            <div class="modalContent stgModal">
                 <div class="switchContainer">
                     <h2>Tema</h2>
                     <div class="theme-switcher">
@@ -121,7 +122,7 @@
                                 <i class='bx bxs-sun'></i> Brillo
                             </span> 
                         </label>
-                        <input type="radio" id="dark-theme" name="themes" checked>
+                        <input type="radio" id="dark-theme" name="themes">
                         <label for="dark-theme">
                             <span>
                                 <i class='bx bxs-moon'></i> Dark
@@ -138,7 +139,7 @@
                         </a>
                     </li>
                     <li>
-                        <a>
+                        <a class="openModalAU">
                             <i class='bx bx-info-circle'></i>
                             <span>Acerca de la pagina</span>
                         </a>
@@ -146,20 +147,40 @@
                 </ul>
             </div>
         </dialog>
+        <!-- Logout menu -->
         <dialog class="logoutModal modal">
             <div class="modalHeader">
                 <h1>Cerrar sesion</h1>
                 <img class = "closeBtnModalL modalX" src="assets/images/close_button.png" alt="close button">
             </div>
-            <div class="modalContentL">
+            <div class="modalContent lgtModal">
                 <div class="logoutText">Esta seguro que quiere cerrar la sesion?</div>
                 <div class="logoutButtons">
-                    <button id="logoutClose" class = "closeBtnModalL">Cerrar</button>
+                    <button id="logoutClose" class = "closeBtnModalL">Cancelar</button>
                     <button id="logoutOk" type="submit">Ok</button>
                 </div>
             </div>
         </dialog>
-
+        <!-- About us -->
+        <dialog class="aboutUsModal modal">
+                <div class="modalHeader">
+                    <h1>Acerca de la pagina</h1>
+                    <img class = "closeBtnModalAU modalX" src="assets/images/close_button.png" alt="close button">
+                </div>
+                <div class="modalContent AUModal">
+                    <p>En este sistema, nos dedicamos a proporcionar herramientas avanzadas y fáciles de usar para ayudarte a mantener un control preciso de tus existencias. Optimiza tus procesos, reduce costos y mejora la eficiencia con nuestras funciones intuitivas.</p>
+                    <h2>Mision</h2>
+                    <p>Facilitar la gestión de inventarios para empresas de todos los tamaños, permitiéndote tomar decisiones informadas y maximizar la eficiencia operativa.</p>
+                    <h2>Caracteristicas Destacadas</h2>
+                    <ul>
+                        <li>Seguimiento en tiempo real</li>
+                        <li>Alertas de reabastecimiento</li>
+                        <li>Informes detallados</li>
+                        <li>Integracion con sistemas de punto de venta (POS)</li>
+                    </ul>
+                    <p></p>
+                </div>
+        </dialog>
     </div>
 </body>
 <script>
@@ -171,7 +192,8 @@
         sidebar.classList.toggle("active");
     }
 
-    // popup window
+    //// popup window
+    // settings window
     const closeButtonS = document.querySelector(".closeBtnModalS")
     const modalS = document.querySelector(".settingsModal")
     const openButtonS = document.querySelector(".openModalS")
@@ -181,17 +203,32 @@
     closeButtonS.addEventListener("click", () => {
         modalS.close();
     })
-    const closeButtonL = document.querySelector(".closeBtnModalL");
+    // logout window
+    const closeButtonL = document.querySelectorAll(".closeBtnModalL");
     const modalL = document.querySelector(".logoutModal")
     const openButtonL = document.querySelector(".openModalL")
     openButtonL.addEventListener("click", () => {
         modalL.showModal()
     })
-    closeButtonL.addEventListener("click", () => {
+
+    for(i = 0; i < closeButtonL.length; i++){
+        closeButtonL[i].addEventListener("click", () => {
         modalL.close();
     })
+    }
+    //About us window
+    const closeButtonAU = document.querySelector(".closeBtnModalAU")
+    const modalAU = document.querySelector(".aboutUsModal");
+    const openButtonAU = document.querySelector(".openModalAU");
+    openButtonAU.addEventListener("click", () => {
+        modalAU.showModal()
+    })
 
-    //Theme switcher slider
+    closeButtonAU.addEventListener("click", () => {
+        modalAU.close();
+    })
+
+    ////Theme switcher slider
     var html = document.getElementsByTagName('html');
     var radios = document.getElementsByName('themes')
 
