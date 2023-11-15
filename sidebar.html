@@ -186,8 +186,8 @@
                         </li>
                         <li>
                             <i class='bx bx-sidebar'></i>
-                            <label for="sidebarCheckBox">Habilitar despliegue del menu lateral:
-                                <input type= "checkbox" checked = "checked" id="sidebar-function" onchange="handleCheckboxchange()">
+                            <label for="sidebar-function">Habilitar despliegue del menu lateral:
+                                <input type= "checkbox" id="sidebar-function" checked = "checked">
                                 <span class="checkmark"></span>
                             </label>
                             
@@ -195,7 +195,7 @@
                         <li>
                             <i class='bx bx-sidebar'></i>
                             <label for="">Habilitar tooltip:
-                                <input type= "checkbox" checked = "checked" id="tooltip-function">
+                                <input type= "checkbox" id="tooltip-function" checked = "checked">
                                 <span class="checkmark"></span>
                             </label>
                         </li>
@@ -226,12 +226,24 @@
     </div>
 </body>
 <script>
+    ////sidebar display?
+    let isSidebarActive = "active";
+    document.getElementById('sidebar-function').onclick = function() {
+        if (this.checked == true) {
+            isSidebarActive = "active";
+        }
+        else{
+            isSidebarActive = "";
+        }
+    };
+
     //// sidebar button
     let btn = document.querySelector("#btn");
     let sidebar = document.querySelector(".sidebar");
     btn.onclick = function() {
-        sidebar.classList.toggle("active");
+        sidebar.classList.toggle(isSidebarActive);
     }
+
     //// popup window
     // settings window
     const closeButtonS = document.querySelector(".closeBtnModalS")
