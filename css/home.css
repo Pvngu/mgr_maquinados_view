@@ -1,0 +1,81 @@
+:root {
+    --c-text-primary: rgb(31, 35, 40);
+    --c-text-header: #7E7F79;
+    --c-border-primary: rgba(0, 0, 0, .1);
+    --c-bg-body: #fff;
+    --c-bg-sidebar: #fff;
+    --c-bg-primary: #fff;
+    --c-bg-secondary: #d4d8dd;
+    --c-bg-button: #fff;
+    --c-bg-button-secondary: #e4e4e4;
+    --c-bg-sb-icon: #F0F2F4;
+  }
+  :root.dark-theme {
+    --c-text-primary: #cbd6e2;
+    --c-text-header: #fff;
+    --c-border-primary: #373E47;
+    --c-bg-body: #1c2128;
+    --c-bg-sidebar: #22272e;
+    --c-bg-primary: #2d333b;
+    --c-bg-secondary: #222128;
+    --c-bg-button: #494a50;
+    --c-bg-button-secondary: #eee;
+    --c-bg-sb-icon: #2e2f33;
+  }
+
+.content{
+  margin: 30px 50px;
+}
+
+.content .welcome h1{
+  text-align: center;
+  font-weight: 500;
+}
+
+.content .welcome h2{
+  text-align: center;
+  margin-block: 25px;
+  font-weight: 400;
+}
+
+.container{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-content: center;
+}
+
+.item-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px var(--c-border-primary);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--c-text-primary);
+    background: var(--c-bg-sidebar);
+}
+
+.item-container img{
+    width: 100px;
+    height: 100px;
+    margin-block: 15px;
+}
+
+.item-container h2{
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding-block: 10px;
+}
+
+.item-container p{
+  font-size: 0.7rem;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+
+.item-container:hover{
+  background: var(--c-bg-sb-icon);
+}

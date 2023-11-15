@@ -24,7 +24,7 @@
             <div class="topItems">
                 <div class="itemsHeader">Menu</div>
                 <li>
-                    <a href="#">
+                    <a href="home.html">
                         <i class='bx bx-home-alt-2'></i>
                         <span>Home</span>
                     </a>
@@ -184,18 +184,10 @@
                                 <option value="big">Grande</option>
                             </select>
                         </li>
-                        <li>
+                        <li class="tooltipList">
                             <i class='bx bx-sidebar'></i>
-                            <label for="sidebar-function">Habilitar despliegue del menu lateral:
-                                <input type= "checkbox" id="sidebar-function" checked = "checked">
-                                <span class="checkmark"></span>
-                            </label>
-                            
-                        </li>
-                        <li>
-                            <i class='bx bx-sidebar'></i>
-                            <label for="">Habilitar tooltip:
-                                <input type= "checkbox" id="tooltip-function" checked = "checked">
+                            <label for="tooltip-function">Habilitar tooltip:
+                                <input type= "checkbox" id="tooltip-function">
                                 <span class="checkmark"></span>
                             </label>
                         </li>
@@ -226,22 +218,11 @@
     </div>
 </body>
 <script>
-    ////sidebar display?
-    let isSidebarActive = "active";
-    document.getElementById('sidebar-function').onclick = function() {
-        if (this.checked == true) {
-            isSidebarActive = "active";
-        }
-        else{
-            isSidebarActive = "";
-        }
-    };
-
     //// sidebar button
     let btn = document.querySelector("#btn");
     let sidebar = document.querySelector(".sidebar");
     btn.onclick = function() {
-        sidebar.classList.toggle(isSidebarActive);
+        sidebar.classList.toggle("active");
     }
 
     //// popup window
