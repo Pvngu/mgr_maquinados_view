@@ -184,17 +184,17 @@
                     <form action="">
                         <li>
                             <i class='bx bx-font-size' ></i>
-                            <span>Tamano de letra: </span>
-                            <select name="font-size" id="">
-                                <option value="">Pequeña</option>
-                                <option value="">Normal</option>
-                                <option value="">Grande</option>
+                            <label for="fontSizeSelector">Tamano de letra:</label>
+                            <select name="font-size" id="fontSizeSelector" onchange="changeFontSize()">
+                                <option value="small">Pequeña</option>
+                                <option value="normal" selected>Normal</option>
+                                <option value="big">Grande</option>
                             </select>
                         </li>
                         <li>
                             <i class='bx bx-sidebar'></i>
-                            <label for="">Habilitar despliegue del menu lateral:
-                                <input type= "checkbox" checked = "checked">
+                            <label for="sidebarCheckBox">Habilitar despliegue del menu lateral:
+                                <input type= "checkbox" checked = "checked" id="sidebar-function" onchange="handleCheckboxchange()">
                                 <span class="checkmark"></span>
                             </label>
                             
@@ -202,7 +202,7 @@
                         <li>
                             <i class='bx bx-sidebar'></i>
                             <label for="">Habilitar tooltip:
-                                <input type= "checkbox" checked = "checked">
+                                <input type= "checkbox" checked = "checked" id="tooltip-function">
                                 <span class="checkmark"></span>
                             </label>
                         </li>
@@ -233,14 +233,12 @@
     </div>
 </body>
 <script>
-    // sidebar button
+    //// sidebar button
     let btn = document.querySelector("#btn");
     let sidebar = document.querySelector(".sidebar");
-
     btn.onclick = function() {
         sidebar.classList.toggle("active");
     }
-
     //// popup window
     // settings window
     const closeButtonS = document.querySelector(".closeBtnModalS")
@@ -297,6 +295,26 @@
             html[0].classList.remove(html[0].classList.item(0));
             html[0].classList.add(this.id);
         });
+    }
+
+    ////Font size selector
+    function changeFontSize(){
+        var body = document.body;
+        var selector = document.getElementById('fontSizeSelector');
+        var selectedValue = selector.value;
+        switch (selectedValue) {
+            case 'small':
+                body.style.fontSize = '12px';
+                break;
+            case 'normal':
+                body.style.fontSize = '16px';
+                break;
+            case 'big':
+                body.style.fontSize = '20px';
+                break;
+            default:
+                body.style.fontSize = '16px';
+        }
     }
 </script>
 </html>
