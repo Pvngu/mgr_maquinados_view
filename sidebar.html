@@ -120,7 +120,7 @@
                         <label for="light-theme">
                             <span>
                                 <i class='bx bxs-sun'></i> Brillo
-                            </span> 
+                            </span>
                         </label>
                         <input type="radio" id="dark-theme" name="themes">
                         <label for="dark-theme">
@@ -133,9 +133,9 @@
                 </div>
                 <ul>
                     <li>
-                        <a>
+                        <a class="openModalAS">
                             <i class='bx bx-cog'></i>
-                            <span>Configuracion de la cuenta</span>
+                            <span>Configuracion de cuenta</span>
                         </a>
                     </li>
                     <li>
@@ -159,6 +159,55 @@
                     <button id="logoutClose" class = "closeBtnModalL">Cancelar</button>
                     <button id="logoutOk" type="submit">Ok</button>
                 </div>
+            </div>
+        </dialog>
+        <!-- Account settings -->
+        <dialog class="accountStgModal modal">
+            <div class="modalHeader">
+                <h1>Configuracion de cuenta</h1>
+                <img class = "closeBtnModalAS modalX" src="assets/images/close_button.png" alt="close button">
+            </div>
+            <div class="modalContent accStgModal">
+                <ul>
+                    <h2>Cuenta</h2>
+                    <li>
+                        <i class='bx bx-user'></i>
+                        <span>Nombre de usuario: </span>
+                        <span>rodolfo el reno</span>
+                    </li>
+                    <li>
+                        <i class='bx bx-user'></i>
+                        <span>Tipo de cuenta: </span>
+                        <span>Admin todo poderoso</span>
+                    </li>
+                    <h2>Pagina</h2>
+                    <form action="">
+                        <li>
+                            <i class='bx bx-font-size' ></i>
+                            <span>Tamano de letra: </span>
+                            <select name="font-size" id="">
+                                <option value="">Pequeña</option>
+                                <option value="">Normal</option>
+                                <option value="">Grande</option>
+                            </select>
+                        </li>
+                        <li>
+                            <i class='bx bx-sidebar'></i>
+                            <label for="">Habilitar despliegue del menu lateral:
+                                <input type= "checkbox" checked = "checked">
+                                <span class="checkmark"></span>
+                            </label>
+                            
+                        </li>
+                        <li>
+                            <i class='bx bx-sidebar'></i>
+                            <label for="">Habilitar tooltip:
+                                <input type= "checkbox" checked = "checked">
+                                <span class="checkmark"></span>
+                            </label>
+                        </li>
+                    </form>
+                </ul>
             </div>
         </dialog>
         <!-- About us -->
@@ -226,6 +275,17 @@
 
     closeButtonAU.addEventListener("click", () => {
         modalAU.close();
+    })
+        //Account settings window
+        const closeButtonAS = document.querySelector(".closeBtnModalAS")
+        const modalAS = document.querySelector(".accountStgModal");
+        const openButtonAS = document.querySelector(".openModalAS");
+        openButtonAS.addEventListener("click", () => {
+        modalAS.showModal()
+    })
+
+    closeButtonAS.addEventListener("click", () => {
+        modalAS.close();
     })
 
     ////Theme switcher slider
