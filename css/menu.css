@@ -143,6 +143,7 @@ section{
     background: linear-gradient(38.73deg, rgba(204, 0, 187, 0.15) 0%, rgba(201, 32, 184, 0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.15) 100%);
     padding-top: 30px;
     clip-path: polygon(0 6%, 23% 0, 100% 6%, 100% 100%, 0 100%);
+    margin: auto;
 }
 
 .collaborators{
