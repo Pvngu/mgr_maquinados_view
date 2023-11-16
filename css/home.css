@@ -24,12 +24,13 @@
   }
 
 .content{
-  margin: 30px 50px;
+  margin: 15px 50px;
 }
 
 .content .welcome h1{
   text-align: center;
   font-weight: 500;
+  padding: 0;
 }
 
 .content .welcome h2{
@@ -55,6 +56,7 @@
     text-decoration: none;
     color: var(--c-text-primary);
     background: var(--c-bg-sidebar);
+    padding: 10px;
 }
 
 .item-container img{

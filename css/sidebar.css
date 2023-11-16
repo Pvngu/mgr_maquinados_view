@@ -218,22 +218,6 @@ header .bizName{
     padding-top: 40px;
 }
 
-.return{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.return a{
-     color: black;
-     font-size: 80px;
-}
-
-.return span {
-    transform: translateY(-30px);
-    font-size: 30px;
-}
-
 .modal {
     border: 0;
     border-radius: 10px;
@@ -363,61 +347,6 @@ header .bizName{
     color: var(--c-text-primary);
     margin-left: 5px;
     padding: 4px 15px;
-}
-
-
-.accountStgModal ul li label{
-    display: block;
-    position: relative;
-    cursor: pointer;
-}
-
-.accountStgModal ul li label input{
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 25px;
-    width: 25px;
-    z-index: 1;
-    margin-left: 10px;
-}
-
-.checkmark{
-    position: absolute;
-    margin-left: 10px;
-    height: 25px;
-    width: 25px;
-    background-color: var(--c-bg-button-secondary);
-}
-
-label:hover input ~ .checkmark {
-    background-color: #ccc;
-}
-
-label input:checked ~ .checkmark{
-    background-color: #2196f3;
-}
-
-.checkmark:after{
-    content: '';
-    position: absolute;
-    display: none;
-}
-
-label input:checked ~ .checkmark:after{
-    display: block;
-}
-
-label .checkmark:after{
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
 }
 
 .lgtModal .logoutText{

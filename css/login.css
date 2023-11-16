@@ -138,33 +138,3 @@ body{
         line-height: 30px;
     }
 }
-
-.return{
-    border-radius: 5px;
-    position: absolute;
-    background: #fff;
-    top: 10px;
-    left: 10px;
-    opacity: 50%;
-    transition: ease 0.5s;
-}
-
-.return a{
-    text-decoration: none;
-    color: black;
-}
-
-.bx-exit{
-    font-size: 30px;
-}
-
-.return:hover{
-    opacity: 100%;
-    padding-right: 80px;
-    transition-delay: 1s;
-}
-
-#return-text{
-    position: absolute;
-    transform: translateY(2px);
-}
