@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sidebar</title>
     <link rel="stylesheet" href="css/sidebar.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/user.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- google font -->
@@ -93,33 +93,33 @@
             </div>
         </header>
         <div class="content">
-            <div class="welcome">
-                <h1>Bienvenido al sistema de inventarios de MGR</h1>
-                <h2>Menu principal</h2>
-            </div>
-                <div class="container">
-                    <a class="item-container" href="#">
-                        <img src="assets/images/inventory.png" alt="icon image">
-                        <h2>Ver inventario</h2>
-                        <p>Muestra la disponibilidad y cantidades de productos para una gestión eficiente del stock del inventario.</p>
-                    </a>
-                    <a class="item-container" href="#">
-                        <img src="assets/images/Report.png" alt="icon image">
-                        <h2>Realizar reportes</h2>
-                        <p>Ofrece datos esenciales para generar informes detallados sobre el inventario, optimizando la toma de decisiones.</p>
-                    </a>
-                    <a class="item-container" href="#">
-                        <img src="assets/images/userAdmin.png" alt="icon image">
-                        <h2>Administrar usuarios</h2>
-                        <p>Acceso al control completo sobre perfiles en la plataforma.</p>
-                    </a>
-                    <a class="item-container" href="#">
-                        <img src="assets/images/settings-icon.png" alt="icon image">
-                        <h2>Configuracion</h2>
-                        <p>Acceso a las configuraciones de la página, incluyendo aspecto, tamaño de letra e informacion adicional.</p>
-                    </a>
-                </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th> # </th>
+                        <th>Usuario</th>
+                        <th>Nombre</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <select name="role" id="role">
+                                <option value="Inventario">Inventario</option>
+                                <option value="Almacen">Almacen</option>
+                                <option value="Administrador">Administrador</option>
+                            </select>
+                            <button class="openModalCU">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+
         <!-- settigns menu -->
         <dialog class="settingsModal modal">
             <div class="modalHeader">
@@ -229,6 +229,15 @@
                     <p></p>
                 </div>
         </dialog>
+        <!-- Create user -->
+        <dialog class="createUserModal modal">
+            <div class="modalHeader">
+                <h1>Crear usuario</h1>
+                <img class = "closeBtnModalCU modalX" src="assets/images/close_button.png" alt="close button">
+            </div>
+            <div class="modalContent CUModal">
+            </div>
+    </dialog>
     </div>
 </body>
 <script>
@@ -274,17 +283,29 @@
     closeButtonAU.addEventListener("click", () => {
         modalAU.close();
     })
-        //Account settings window
-        const closeButtonAS = document.querySelector(".closeBtnModalAS")
-        const modalAS = document.querySelector(".accountStgModal");
-        const openButtonAS = document.querySelector(".openModalAS");
-        openButtonAS.addEventListener("click", () => {
-        modalAS.showModal()
+    //Account settings window
+    const closeButtonAS = document.querySelector(".closeBtnModalAS")
+    const modalAS = document.querySelector(".accountStgModal");
+    const openButtonAS = document.querySelector(".openModalAS");
+    openButtonAS.addEventListener("click", () => {
+    modalAS.showModal()
     })
 
     closeButtonAS.addEventListener("click", () => {
         modalAS.close();
     })
+
+        //create user
+        const closeButtonCU = document.querySelector(".closeBtnModalCU")
+        const modalCU = document.querySelector(".createUserModal");
+        const openButtonCU = document.querySelector(".openModalCU");
+        openButtonCU.addEventListener("click", () => {
+            modalCU.showModal();
+        })
+
+        closeButtonCU.addEventListener("click", () => {
+            modalCU.close();
+        })
 
     ////Theme switcher slider
     var html = document.getElementsByTagName('html');
